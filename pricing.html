@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+
+  <body>
+    <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Omega</a>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link trn" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link trn" href="features.html">Features</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link trn" href="team.html">The Team</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link trn" href="pricing.html">Pricing
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link trn" href="#">Contact</a>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle trn" type="button" id="languageDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Languages</button>
+            <div class="dropdown-menu" aria-labelledby="languageDropdown">
+              <a class="dropdown-item change-language" data-language="en" href="#">English</a>
+              <a class="dropdown-item change-language" data-language="fr" href="#">Français</a>
+              <a class="dropdown-item change-language" data-language="de" href="#">Deutsch</a>
+            </div>
+          </div>
+        </form>
+      </div>
+    </nav>
+    <div class="jumbotron">
+      <h1 class="trn">Our pricing is usage based</h1>
+      <p class="lead trn">We only charge you
+        <span class="trn package-price">0.05 €</span> when a package leave your warehouses.</p>
+      <hr class="my-4">
+      <p class="lead">
+        <a class="btn btn-primary btn-lg cta trn" href="#" role="button">Try it for free</a>
+      </p>
+    </div>
+    <div class="container">
+      <h4>How many packages on average are shipped from you warehouses each month ?</h4>
+      <div class="row">
+        <div class="col-1 col-sm-1 col-md-1 col-lg-1 col-xl-1">
+          <p class="float-right">0</p>
+        </div>
+        <div class="col-10 col-sm-10 col-md-10 col-lg-10 col-xl-10">
+          <input class="pricing-range" type="range" name="nb-packages" min="0" step="100" max="10000" value="300">
+        </div>
+        <div class="col-1 col-sm-1 col-md-1 col-lg-1 col-xl-1">
+          <p class="float-left">10 000</p>
+        </div>
+      </div>
+      <div class="card card-outline-primary text-center">
+        <div class="card-block">
+          <span class="trn">For </span>
+          <b><span class="packages-per-day"></span></b>
+          <span class="trn"> packages per month.</span>
+          <span class="trn">Omega will charge you </span>
+          <b><span class="price-per-day"></span></b>
+          <span class="trn">€</span>
+        </div>
+      </div>
+    </div>
+    <!-- jQuery first, then Tether, then Bootstrap JS. -->
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="lib/jquery.translate.js"></script>
+    <script type="text/javascript" src="i18n.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+    <script type="text/javascript">
+      var defaultValueForNbPackagesPerDay = Number($('.pricing-range').val());
+      $('.packages-per-day').text(defaultValueForNbPackagesPerDay);
+      $('.price-per-day').text(getPricing(defaultValueForNbPackagesPerDay));
+    </script>
+  </body>
+
+</html>
