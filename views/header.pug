@@ -1,0 +1,35 @@
+nav.navbar.navbar-toggleable-md.navbar-light.bg-faded
+  button.navbar-toggler.navbar-toggler-right(
+    type='button',
+    data-toggle='collapse',
+    data-target='#navbarSupportedContent',
+    aria-controls='navbarSupportedContent',
+    aria-expanded='false',
+    aria-label='Toggle navigation'
+  )
+    span.navbar-toggler-icon 
+  a.navbar-brand(href='#')= title  
+  #navbarSupportedContent.collapse.navbar-collapse
+    ul.navbar-nav.mr-auto
+      li.nav-item
+        a.nav-link(href='#') Home 
+      li.nav-item
+        a.nav-link(href='#') Features
+      li.nav-item
+        a.nav-link(href='#') The Team   
+      li.nav-item
+        a.nav-link(href='#') Pricing
+      li.nav-item
+        a.nav-link(href='#') Contact
+    form.form-inline.my-2.my-lg-0
+      .dropdown
+        a#dropdownMenuLink.btn.btn-secondary.dropdown-toggle(
+          href='#',
+          data-toggle='dropdown',
+          aria-haspopup='true',
+          aria-expanded='false'
+        ) Language
+        .dropdown-menu(aria-labelledby='dropdownMenuLink')
+          a.dropdown-item(href='/?clang=en') English    
+          a.dropdown-item(href='/?clang=fr') Français     
+          a.dropdown-item(href='/?clang=de') Deutsch
